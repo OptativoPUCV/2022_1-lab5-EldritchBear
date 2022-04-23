@@ -97,8 +97,8 @@ if((node->left == NULL) && (node->right == NULL)){
 
     node->pair->key = aux->pair->key;
     node->pair->value = aux->pair->value;
-    free(aux);
-    //aux->parent = aux->right;
+    remove(tree,aux);
+    return;
   }
   
   if(((node->right != NULL) && (node->left == NULL)) || ((node->right == NULL) && (node->left != NULL))){ //un solo hijo
