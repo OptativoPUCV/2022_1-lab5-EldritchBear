@@ -80,11 +80,11 @@ if((node->left == NULL) && (node->right == NULL)){
     free(node);
   }
 
-  if((node->left != NULL) && (node->right != NULL)){
+  if((node->left != NULL) && (node->right != NULL)){ //dos hijos
     
   }
   
-  if((node->right == NULL) || (node->left == NULL)){
+  if((node->right == NULL) || (node->left == NULL)){ //un solo hijo
     if(node->parent->right == node){ //nodo->current a la derecha
         if(node->right != NULL){ //buscar hijo a la derecha
             node->parent->right = node->right;
