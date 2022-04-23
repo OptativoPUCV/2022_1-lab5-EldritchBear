@@ -70,7 +70,23 @@ TreeNode * minimum(TreeNode * x){
 
 
 void removeNode(TreeMap * tree, TreeNode* node) {
+if((node->left == NULL) && (node->right == NULL)){
+        if(node->parent->right == node){
+        node->parent->right = NULL;
+    }
+    else{
+      node->parent->left = NULL;
+    }
+  }
 
+  if((node->left != NULL) && (node->right != NULL)){
+    
+  }
+  
+  if((node->right != NULL) || (node->left != NULL)){
+    
+  }
+  
 }
 
 void eraseTreeMap(TreeMap * tree, void* key){
