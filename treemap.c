@@ -92,7 +92,7 @@ if((node->left == NULL) && (node->right == NULL)){
   }*/
   
   if(((node->right != NULL) && (node->left == NULL)) || ((node->right == NULL) && (node->left != NULL))){ //un solo hijo
-    if(node->parent->right == node){ //nodo->current a la derecha
+    /*if(node->parent->right == node){ //nodo->current a la derecha
         if(node->right != NULL){ //buscar hijo a la derecha
             node->parent->right = node->right;
             node->right->parent = node->parent;
@@ -112,7 +112,7 @@ if((node->left == NULL) && (node->right == NULL)){
             node->right->parent = node->parent;
         }
     }
-  }
+  }*/
   free(node);
 }
 
