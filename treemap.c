@@ -77,7 +77,6 @@ if((node->left == NULL) && (node->right == NULL)){
     else{
       node->parent->left = NULL;
     }
-    free(node);
   }
 
   if((node->left != NULL) && (node->right != NULL)){ //dos hijos
