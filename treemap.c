@@ -77,30 +77,32 @@ if((node->left == NULL) && (node->right == NULL)){
     else{
       node->parent->left = NULL;
     }
+    free(node);
   }
 
   if((node->left != NULL) && (node->right != NULL)){
     
   }
   
-  if((node->right != NULL) || (node->left != NULL)){
-    if(node->parent->right == node){
-        if(node->right != NULL){
+  if((node->right == NULL) || (node->left == NULL)){
+    if(node->parent->right == node){ //nodo->current a la derecha
+        if(node->right != NULL){ //buscar hijo a la derecha
             node->parent->right = node->right;
         }
-        else{
+        else{ //sino hijo esta a la izquierda
             node->parent->right = node->left;
         }
     }
-    else{
-        if(node->left != NULL){
+    else{ // el nodo->current esta a la izquierda
+        if(node->left != NULL){ //revisar hijo a la izquierda
             node->parent->left = node->right;
         }
-        else{
+        else{ //hijo a la derecha
             node->parent->left = node->left;
         }
     }
   }
+  free(node);
 }
 
 void eraseTreeMap(TreeMap * tree, void* key){
