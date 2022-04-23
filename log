@@ -64,3 +64,29 @@ Sat Apr 23 12:28:32 HSP 2022:
  1 file changed, 4 insertions(+), 4 deletions(-)
  tests:  0|0
 a312c65
+Sat Apr 23 18:30:27 UTC 2022: 
+test.c: In function ‘creaPalabra’:
+test.c:47:17: error: implicit declaration of function ‘_strdup’; did you mean ‘strdup’? [-Werror=implicit-function-declaration]
+     new->word = _strdup(word);
+                 ^~~~~~~
+                 strdup
+test.c:47:15: error: assignment makes pointer from integer without a cast [-Werror=int-conversion]
+     new->word = _strdup(word);
+               ^
+test.c: In function ‘insert_test1’:
+test.c:174:35: error: passing argument 2 of ‘creaPalabra’ makes pointer from integer without a cast [-Werror=int-conversion]
+     Palabra* p = creaPalabra(1273,_strdup("repetido"));
+                                   ^~~~~~~
+test.c:44:10: note: expected ‘char *’ but argument is of type ‘int’
+ Palabra* creaPalabra(int id, char* word){
+          ^~~~~~~~~~~
+test.c: In function ‘insert_test2’:
+test.c:190:34: error: passing argument 2 of ‘creaPalabra’ makes pointer from integer without a cast [-Werror=int-conversion]
+     Palabra* p = creaPalabra(900,_strdup("maicol"));
+                                  ^~~~~~~
+test.c:44:10: note: expected ‘char *’ but argument is of type ‘int’
+ Palabra* creaPalabra(int id, char* word){
+          ^~~~~~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+1a7d280
