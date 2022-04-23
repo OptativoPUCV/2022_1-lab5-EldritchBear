@@ -87,7 +87,7 @@ if((node->left == NULL) && (node->right == NULL)){
     aux = aux->right;
     aux = minimum(aux);
     node->pair->key = aux->pair->key;
-    node->value = aux->value;
+    node->pair->value = aux->pair->value;
     //aux->parent = aux->right;
   }
   
