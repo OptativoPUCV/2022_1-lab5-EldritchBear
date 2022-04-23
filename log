@@ -391,3 +391,29 @@ treemap.c:40:18: error: expected expression before ‘TreeMap’
                   ^~~~~~~
 Compilation failed
 69a40ed
+Sat Apr 23 20:42:14 UTC 2022: 
+ treemap.c | 6 +++++-
+ 1 file changed, 5 insertions(+), 1 deletion(-)
+In file included from test.c:4:0:
+treemap.c: In function ‘createTreeMap’:
+treemap.c:41:3: error: ‘map’ undeclared (first use in this function)
+   map->root = NULL;
+   ^~~
+treemap.c:41:3: note: each undeclared identifier is reported only once for each function it appears in
+treemap.c:43:3: error: ‘lt’ undeclared (first use in this function)
+   lt = lower_than(key1,key2);
+   ^~
+treemap.c:43:19: error: ‘key1’ undeclared (first use in this function); did you mean ‘key_t’?
+   lt = lower_than(key1,key2);
+                   ^~~~
+                   key_t
+treemap.c:43:24: error: ‘key2’ undeclared (first use in this function); did you mean ‘key1’?
+   lt = lower_than(key1,key2);
+                        ^~~~
+                        key1
+treemap.c:47:1: error: control reaches end of non-void function [-Werror=return-type]
+ }
+ ^
+cc1: all warnings being treated as errors
+Compilation failed
+e5edfbb
