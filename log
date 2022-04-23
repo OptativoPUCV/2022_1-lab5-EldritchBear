@@ -745,3 +745,17 @@ test.c:503:5: error: ‘main’ defined but not used [-Werror=unused-function]
 cc1: all warnings being treated as errors
 Compilation failed
 a50804b
+Sat Apr 23 21:28:40 UTC 2022: 
+ treemap.c | 10 +++++-----
+ 1 file changed, 5 insertions(+), 5 deletions(-)
+In file included from test.c:4:0:
+treemap.c: In function ‘removeNode’:
+treemap.c:94:107: error: unknown type name ‘un’; did you mean ‘uint’?
+   if(((node->right != NULL) && (node->left == NULL)) || ((node->right == NULL) && (node->left != NULL))){ un solo hijo
+                                                                                                           ^~
+                                                                                                           uint
+treemap.c:94:115: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘hijo’
+   if(((node->right != NULL) && (node->left == NULL)) || ((node->right == NULL) && (node->left != NULL))){ un solo hijo
+                                                                                                                   ^~~~
+Compilation failed
+e722d4d
