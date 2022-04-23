@@ -588,3 +588,22 @@ Sat Apr 23 21:09:29 UTC 2022:
  tests:  21|3
 total_score: 45/70
 a224826
+Sat Apr 23 21:13:01 UTC 2022: 
+ treemap.c | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+In file included from test.c:4:0:
+treemap.c: In function ‘removeNode’:
+treemap.c:89:9: error: ‘TreeNode {aka struct TreeNode}’ has no member named ‘key’
+     node->key = aux->key;
+         ^~
+treemap.c:89:20: error: ‘TreeNode {aka struct TreeNode}’ has no member named ‘key’
+     node->key = aux->key;
+                    ^~
+treemap.c:90:9: error: ‘TreeNode {aka struct TreeNode}’ has no member named ‘value’
+     node->value = aux->value;
+         ^~
+treemap.c:90:22: error: ‘TreeNode {aka struct TreeNode}’ has no member named ‘value’
+     node->value = aux->value;
+                      ^~
+Compilation failed
+e9e007f

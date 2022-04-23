@@ -86,8 +86,8 @@ if((node->left == NULL) && (node->right == NULL)){
     TreeNode *aux = node;
     aux = aux->right;
     aux = minimum(aux);
-    node = aux;
-    removeNode(tree, aux);
+    node->key = aux->key;
+    node->value = aux->value;
     //aux->parent = aux->right;
   }
   
@@ -113,7 +113,7 @@ if((node->left == NULL) && (node->right == NULL)){
         }
     }
   }
-  //free(node);
+  free(node);
 }
 
 void eraseTreeMap(TreeMap * tree, void* key){
