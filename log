@@ -866,3 +866,8 @@ treemap.c:89:15: note: previous definition of ‘aux’ was here
 cc1: all warnings being treated as errors
 Compilation failed
 9322964
+Sat Apr 23 23:08:55 UTC 2022: 
+ treemap.c | 3 +--
+ 1 file changed, 1 insertion(+), 2 deletions(-)
+ tests:  0|0
+60b5d76

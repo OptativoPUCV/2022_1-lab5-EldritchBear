@@ -88,11 +88,10 @@ if((node->left == NULL) && (node->right == NULL)){
   if(((node->left != NULL) && (node->right != NULL))){ //dos hijos
     TreeNode *aux = node;
     if(node->parent == NULL){
-      aux ->right;
+      aux = aux->right;
       tree->root = minimum(aux);
     }
     
-    TreeNode *aux = node;
     aux = aux->right;
     aux = minimum(aux);
 
