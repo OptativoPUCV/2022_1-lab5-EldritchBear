@@ -113,7 +113,7 @@ if((node->left == NULL) && (node->right == NULL)){
         }
     }
   }
-  free(node);
+  //free(node);
 }
 
 void eraseTreeMap(TreeMap * tree, void* key){
