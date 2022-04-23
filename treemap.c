@@ -102,7 +102,11 @@ if((node->left == NULL) && (node->right == NULL)){
   
   if(((node->right != NULL) && (node->left == NULL)) || ((node->right == NULL) && (node->left != NULL))){ //un solo hijo
     if(node->parent == NULL){
-      tree->root = NULL;
+      if(node->left != NULL){
+        tree->root = node->left;
+      }else{
+        tree->root = node->right;
+      }
     }
     if(node->parent->right == node){ //nodo->current a la derecha
         if(node->right != NULL){ //buscar hijo a la derecha
