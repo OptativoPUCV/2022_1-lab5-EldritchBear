@@ -82,7 +82,7 @@ if((node->left == NULL) && (node->right == NULL)){
     }
   }
 
-  if(((node->left != NULL) && (node->right != NULL))){ //dos hijos
+  /*if(((node->left != NULL) && (node->right != NULL))){ //dos hijos
     TreeNode *aux = node;
     aux = aux->right;
     aux = minimum(aux);
@@ -90,7 +90,7 @@ if((node->left == NULL) && (node->right == NULL)){
     node->pair->value = aux->pair->value;
     free(aux);
     //aux->parent = aux->right;
-  }
+  }*/
   
   if(((node->right != NULL) && (node->left == NULL)) || ((node->right == NULL) && (node->left != NULL))){ //un solo hijo
     if(node->parent->right == node){ //nodo->current a la derecha
