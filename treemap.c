@@ -84,14 +84,23 @@ if((node->left == NULL) && (node->right == NULL)){
   }
   
   if((node->right != NULL) || (node->left != NULL)){
-    if(node->right != NULL){
-        node->parent->right = node->right;
+    if(node->parent->right == node){
+        if(node->right != NULL){
+            node->parent->right = node->right;
+        }
+        else{
+            node->parent->right = node->left;
+        }
     }
     else{
-        node->parent->left = node->left;
+        if(node->left != NULL){
+            node->parent->left = node->right;
+        }
+        else{
+            node->parent->left = node->left;
+        }
     }
   }
-  
 }
 
 void eraseTreeMap(TreeMap * tree, void* key){
