@@ -81,12 +81,12 @@ if((node->left == NULL) && (node->right == NULL)){
 
   if((node->left != NULL) && (node->right != NULL)){ //dos hijos
     TreeNode *aux = node;
-    aux = aux->right;
-    while (aux->left != NULL){
-      aux = aux->left;
+    aux = aux->left;
+    while (aux->right != NULL){
+      aux = aux->right;
     }
     node = aux;
-    aux->parent = aux->left;
+    aux->parent = aux->right;
   }
   
   if((node->right != NULL) || (node->left != NULL)){ //un solo hijo
