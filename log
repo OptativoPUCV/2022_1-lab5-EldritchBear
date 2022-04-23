@@ -463,3 +463,14 @@ treemap.c:45:19: error: assignment makes pointer from integer without a cast [-W
 cc1: all warnings being treated as errors
 Compilation failed
 fdbdbee
+Sat Apr 23 20:49:26 UTC 2022: 
+ treemap.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+In file included from test.c:4:0:
+treemap.c: In function ‘createTreeMap’:
+treemap.c:48:1: error: control reaches end of non-void function [-Werror=return-type]
+ }
+ ^
+cc1: all warnings being treated as errors
+Compilation failed
+00fbc18
