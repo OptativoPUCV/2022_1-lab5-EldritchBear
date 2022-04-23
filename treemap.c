@@ -87,7 +87,7 @@ if((node->left == NULL) && (node->right == NULL)){
     aux = aux->right;
     aux = minimum(aux);
     node = aux;
-    removeNode(tree, aux)
+    removeNode(tree, aux);
     //aux->parent = aux->right;
   }
   
