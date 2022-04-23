@@ -83,12 +83,12 @@ if((node->left == NULL) && (node->right == NULL)){
   }
 
   if(((node->left != NULL) && (node->right != NULL))){ //dos hijos
-    //TreeNode *aux = node;
-    //aux = aux->left;
-    //aux = minimum(aux);
-    //node->pair->key = aux->pair->key;
-    //node->pair->value = aux->pair->value;
-    //aux->parent = aux->right;
+    TreeNode *aux = node;
+    aux = aux->left;
+    aux = minimum(aux);
+    node->pair->key = aux->pair->key;
+    node->pair->value = aux->pair->value;
+    aux->parent = aux->right;
   }
   
   if(((node->right != NULL) && (node->left == NULL)) || ((node->right == NULL) && (node->left != NULL))){ //un solo hijo
