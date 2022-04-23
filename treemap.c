@@ -83,7 +83,7 @@ if((node->left == NULL) && (node->right == NULL)){
     TreeNode *aux = node;
     aux = aux->left;
     while (aux->right != NULL){
-      printf("key: %d\n", *(int*)node->pair->key );
+      printf("key: %d\n", *(int*)aux->pair->key );
       aux = aux->right;
     }
     node = aux;
