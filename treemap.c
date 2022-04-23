@@ -85,7 +85,7 @@ if((node->left == NULL) && (node->right == NULL)){
   if(((node->left != NULL) && (node->right != NULL))){ //dos hijos
     TreeNode *aux = node;
     aux = aux->right;
-    aux = minimum(aux);
+    //aux = minimum(aux);
     node->pair->key = aux->pair->key;
     node->pair->value = aux->pair->value;
     //aux->parent = aux->right;
