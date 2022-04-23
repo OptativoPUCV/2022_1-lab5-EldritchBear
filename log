@@ -531,3 +531,33 @@ Sat Apr 23 21:05:59 UTC 2022:
  tests:  21|3
 total_score: 45/70
 faafa71
+Sat Apr 23 21:06:41 UTC 2022: 
+ treemap.c | 3 +--
+ 1 file changed, 1 insertion(+), 2 deletions(-)
+In file included from test.c:4:0:
+treemap.c: In function ‘removeNode’:
+treemap.c:90:12: error: ‘aux’ undeclared (first use in this function)
+     node = aux;
+            ^~~
+treemap.c:90:12: note: each undeclared identifier is reported only once for each function it appears in
+treemap.c: At top level:
+treemap.c:94:3: error: expected identifier or ‘(’ before ‘if’
+   if(((node->right != NULL) && (node->left == NULL)) || ((node->right == NULL) && (node->left != NULL))){ //un solo hijo
+   ^~
+treemap.c:116:3: error: data definition has no type or storage class [-Werror]
+   free(node);
+   ^~~~
+treemap.c:116:3: error: type defaults to ‘int’ in declaration of ‘free’ [-Werror=implicit-int]
+treemap.c:116:3: error: parameter names (without types) in function declaration [-Werror]
+treemap.c:116:3: error: conflicting types for ‘free’
+In file included from test.c:2:0:
+/usr/include/stdlib.h:563:13: note: previous declaration of ‘free’ was here
+ extern void free (void *__ptr) __THROW;
+             ^~~~
+In file included from test.c:4:0:
+treemap.c:117:1: error: expected identifier or ‘(’ before ‘}’ token
+ }
+ ^
+cc1: all warnings being treated as errors
+Compilation failed
+10692ba
