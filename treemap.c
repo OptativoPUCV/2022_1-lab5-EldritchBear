@@ -95,7 +95,7 @@ if((node->left == NULL) && (node->right == NULL)){
     if(node->parent->right == node){ //nodo->current a la derecha
         if(node->right != NULL){ //buscar hijo a la derecha
             node->parent->right = node->right;
-            //node->right->parent = node->parent;
+            node->right->parent = node->parent;
         }
         else{ //sino hijo esta a la izquierda
             node->parent->right = node->left;
