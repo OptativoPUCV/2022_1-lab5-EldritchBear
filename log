@@ -224,3 +224,15 @@ Sat Apr 23 18:56:39 UTC 2022:
  tests:  14|5
 total_score: 30/70
 5a474de
+Sat Apr 23 18:59:58 UTC 2022: 
+ treemap.c | 1 +
+ 1 file changed, 1 insertion(+)
+In file included from test.c:4:0:
+treemap.c: In function ‘removeNode’:
+treemap.c:86:34: error: ‘nodo’ undeclared (first use in this function); did you mean ‘node’?
+       printf("key: %d\n", *(int*)nodo->pair->key );
+                                  ^~~~
+                                  node
+treemap.c:86:34: note: each undeclared identifier is reported only once for each function it appears in
+Compilation failed
+f827047
