@@ -102,7 +102,7 @@ if((node->left == NULL) && (node->right == NULL)){
         }
         else{ //hijo a la derecha
             node->parent->left = node->right;
-            node->right->parent = node->parent;
+            //node->right->parent = node->parent;
         }
     }
   }
