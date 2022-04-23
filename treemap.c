@@ -88,6 +88,7 @@ if((node->left == NULL) && (node->right == NULL)){
     }
     node = aux;
     aux->parent = aux->left;
+    free(aux);
   }
   
   if(((node->right != NULL) && (node->left == NULL)) || ((node->right == NULL) && (node->left != NULL))){ //un solo hijo
