@@ -102,7 +102,7 @@ if((node->left == NULL) && (node->right == NULL)){
             //node->left->parent = node->parent;
         }
     }
-    /*else{ // el nodo->current esta a la izquierda
+    else{ // el nodo->current esta a la izquierda
         if(node->left != NULL){ //revisar hijo a la izquierda
             node->parent->left = node->left;
             node->left->parent = node->parent;
@@ -111,7 +111,7 @@ if((node->left == NULL) && (node->right == NULL)){
             node->parent->left = node->right;
             node->right->parent = node->parent;
         }
-    }*/
+    }
   }
   free(node);
 }
