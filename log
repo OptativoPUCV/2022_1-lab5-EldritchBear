@@ -417,3 +417,26 @@ treemap.c:47:1: error: control reaches end of non-void function [-Werror=return-
 cc1: all warnings being treated as errors
 Compilation failed
 e5edfbb
+Sat Apr 23 20:42:36 UTC 2022: 
+ treemap.c | 1 +
+ 1 file changed, 1 insertion(+)
+In file included from test.c:4:0:
+treemap.c: In function ‘createTreeMap’:
+treemap.c:42:3: error: ‘map’ undeclared (first use in this function)
+   map->root = NULL;
+   ^~~
+treemap.c:42:3: note: each undeclared identifier is reported only once for each function it appears in
+treemap.c:44:19: error: ‘key1’ undeclared (first use in this function); did you mean ‘key_t’?
+   lt = lower_than(key1,key2);
+                   ^~~~
+                   key_t
+treemap.c:44:24: error: ‘key2’ undeclared (first use in this function); did you mean ‘key1’?
+   lt = lower_than(key1,key2);
+                        ^~~~
+                        key1
+treemap.c:48:1: error: control reaches end of non-void function [-Werror=return-type]
+ }
+ ^
+cc1: all warnings being treated as errors
+Compilation failed
+b02f9ab
