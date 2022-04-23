@@ -81,7 +81,7 @@ if((node->left == NULL) && (node->right == NULL)){
 
   if((node->left != NULL) && (node->right != NULL)){ //dos hijos
     TreeNode *aux = node;
-    aux = aux->left;
+    aux = aux->right;
     while (aux->left != NULL){
       aux = aux->left;
     }
@@ -107,7 +107,7 @@ if((node->left == NULL) && (node->right == NULL)){
         }
         else{ //hijo a la derecha
             node->parent->left = node->right;
-            //node->right->parent = node->parent;
+            node->right->parent = node->parent;
         }
     }
   }
