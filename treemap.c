@@ -97,7 +97,7 @@ if((node->left == NULL) && (node->right == NULL)){
 
     node->pair->key = aux->pair->key;
     node->pair->value = aux->pair->value;
-    remove(tree,aux);
+    removeNode(tree,aux);
     return;
   }
   
