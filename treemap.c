@@ -73,7 +73,7 @@ TreeNode * minimum(TreeNode * x){
 
 
 void removeNode(TreeMap * tree, TreeNode* node) {
-if((node->left == NULL) && (node->right == NULL)){
+/*if((node->left == NULL) && (node->right == NULL)){
         if(node->parent->right == node){
         node->parent->right = NULL;
     }
@@ -105,7 +105,7 @@ if((node->left == NULL) && (node->right == NULL)){
     else{ // el nodo->current esta a la izquierda
         if(node->left != NULL){ //revisar hijo a la izquierda
             node->parent->left = node->left;
-            //node->left->parent = node->parent;
+            node->left->parent = node->parent;
         }
         else{ //hijo a la derecha
             node->parent->left = node->right;
@@ -113,7 +113,7 @@ if((node->left == NULL) && (node->right == NULL)){
         }
     }
   }
-  free(node);
+  free(node);*/
 }
 
 void eraseTreeMap(TreeMap * tree, void* key){
