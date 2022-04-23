@@ -297,3 +297,9 @@ treemap.c:93:28: error: suggest parentheses around ‘&&’ within ‘||’ [-We
 cc1: all warnings being treated as errors
 Compilation failed
 a73c56b
+Sat Apr 23 19:53:07 UTC 2022: 
+ treemap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  18|4
+total_score: 40/70
+fe176d9
