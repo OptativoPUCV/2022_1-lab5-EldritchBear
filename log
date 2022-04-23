@@ -286,3 +286,14 @@ Sat Apr 23 19:42:38 UTC 2022:
  tests:  18|4
 total_score: 40/70
 2b68f15
+Sat Apr 23 19:52:39 UTC 2022: 
+ treemap.c | 3 +--
+ 1 file changed, 1 insertion(+), 2 deletions(-)
+In file included from test.c:4:0:
+treemap.c: In function ‘removeNode’:
+treemap.c:93:28: error: suggest parentheses around ‘&&’ within ‘||’ [-Werror=parentheses]
+   if((node->right != NULL) && (node->left == NULL) || (node->right == NULL) && (node->left != NULL)){ //un solo hijo
+      ~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+a73c56b
