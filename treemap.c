@@ -112,8 +112,8 @@ if((node->left == NULL) && (node->right == NULL)){
             node->right->parent = node->parent;
         }
     }
-  }*/
-  free(node);
+  }
+  free(node);*/
 }
 
 void eraseTreeMap(TreeMap * tree, void* key){
