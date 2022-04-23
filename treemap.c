@@ -86,7 +86,7 @@ if((node->left == NULL) && (node->right == NULL)){
     while (aux->right != NULL){
       aux = aux->right;
     }
-    node->parent->right = aux;
+    node->parent->left = aux;
     node = aux;
     aux->parent = aux->left;
   }
