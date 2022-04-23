@@ -84,7 +84,12 @@ if((node->left == NULL) && (node->right == NULL)){
   }
   
   if((node->right != NULL) || (node->left != NULL)){
-    
+    if(node->right != NULL){
+        node->parent->right = node->right;
+    }
+    else{
+        node->parent->left = node->left;
+    }
   }
   
 }
