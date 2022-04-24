@@ -203,7 +203,7 @@ Pair * nextTreeMap(TreeMap * tree) {
   if(aux->right == NULL){
     while(aux->parent != tree->root){
       if(aux->parent == NULL)return NULL;
-      //printf("key: %d\n", *(int*)aux->pair->key );
+      printf("key: %d\n", *(int*)aux->pair->key );
       if(tree->lower_than(aux->pair->key, aux->parent->pair->key) == 1){
         aux = aux->parent;
         tree->current = aux;
