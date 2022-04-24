@@ -160,14 +160,15 @@ Pair * searchTreeMap(TreeMap * tree, void* key) {
 
 
 Pair * upperBound(TreeMap * tree, void* key) {
-  TreeNode *aux = tree->root;
+  //TreeNode *aux = tree->root;
   TreeNode *UB = tree->root;
 
   while(UB != NULL){
-    if(tree->lower_than(key, UB->pair->key) == 1){
+    if(tree->lower_than(UB->pair->key, key) == 1){
       UB = UB->left;
-      aux = UB;
+      //aux = UB;
     }
+    
     else{
       UB = UB->right;
     }
