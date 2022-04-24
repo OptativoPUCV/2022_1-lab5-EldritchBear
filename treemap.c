@@ -209,6 +209,10 @@ Pair * nextTreeMap(TreeMap * tree) {
         tree->current = aux;
         return aux->pair;
       }
+      else if(tree->lower_than(aux->pair->key, aux->parent->pair->key) == 0){
+        tree->current = aux;
+        return aux->pair;
+      }
       else{
         printf("a");
         aux = aux->parent;
