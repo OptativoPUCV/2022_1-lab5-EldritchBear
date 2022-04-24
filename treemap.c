@@ -161,20 +161,20 @@ Pair * searchTreeMap(TreeMap * tree, void* key) {
 
 Pair * upperBound(TreeMap * tree, void* key) {
   /*TreeNode *nodo = tree->root;
-  TreeNode *aux = tree->root;
+  TreeNode *aux = nodo;
 
   while(nodo != NULL){
-    if(tree->lower_than(key, nodo->pair->key) == 1){
-      if(tree->lower_than(aux->pair->key,key) == 1){
+    if(tree->lower_than(key,nodo->pair->key) == 1){
+      if(tree->lower_than(key,nodo->pair->key) == 1){
         aux = nodo;
       }else aux = nodo;
-      nodo = nodo->right;
+      nodo = nodo->left;
     }
-    else if (tree->lower_than(key, nodo->pair->key) == 1){
-      if(tree->lower_than(key,aux->pair->key) == 1){
+    else if (tree->lower_than(nodo->pair->key,key) == 1){
+      if(tree->lower_than(aux->pair->key,key) == 1){
         aux = nodo;
       }
-      nodo = nodo->left;
+      nodo = nodo->right;
     }
   }
     return aux->pair;*/
@@ -198,6 +198,7 @@ Pair * nextTreeMap(TreeMap * tree) {
   if(aux->right == NULL){
     while(aux->parent != NULL){
       if(aux->parent == NULL)return NULL;
+      printf("%i",aux->pair->key);
       if(tree->lower_than(aux->pair->key, aux->parent->pair->key) == 1){
         aux = aux->parent;
         tree->current = aux;
