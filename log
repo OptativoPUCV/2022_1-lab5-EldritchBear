@@ -973,3 +973,14 @@ Sun Apr 24 19:49:31 UTC 2022:
  tests:  22|2
 total_score: 50/70
 671559b
+Sun Apr 24 19:49:50 UTC 2022: 
+ treemap.c | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+In file included from test.c:4:0:
+treemap.c: In function ‘upperBound’:
+treemap.c:176:12: error: return from incompatible pointer type [-Werror=incompatible-pointer-types]
+     return aux;
+            ^~~
+cc1: all warnings being treated as errors
+Compilation failed
+7c28d11
