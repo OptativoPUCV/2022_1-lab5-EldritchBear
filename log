@@ -1328,3 +1328,15 @@ treemap.c:210:42: error: ‘pair’ undeclared (first use in this function); did
 treemap.c:210:42: note: each undeclared identifier is reported only once for each function it appears in
 Compilation failed
 f82f1a2
+Sun Apr 24 22:15:55 UTC 2022: 
+ treemap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:0:
+treemap.c: In function ‘nextTreeMap’:
+treemap.c:210:41: error: ‘pair’ undeclared (first use in this function); did you mean ‘Pair’?
+         if(aux->parent->pair->key < aux-pair->key)return NULL;
+                                         ^~~~
+                                         Pair
+treemap.c:210:41: note: each undeclared identifier is reported only once for each function it appears in
+Compilation failed
+7627328
