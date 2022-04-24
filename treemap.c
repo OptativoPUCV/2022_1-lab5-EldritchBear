@@ -195,10 +195,10 @@ Pair * nextTreeMap(TreeMap * tree) {
     return minimum(aux)->pair;
   }
 
-  if(tree->lower_than(aux->pair->key, aux->parent->pair->key) == 0){
+  /*if(tree->lower_than(aux->pair->key, aux->parent->pair->key) == 0){
     tree->current = aux;
     return aux->pair;
-  }
+  }*/
   
   if(aux->right == NULL){
     while(aux->parent != tree->root){
