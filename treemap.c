@@ -212,7 +212,7 @@ Pair * nextTreeMap(TreeMap * tree) {
         return aux->pair;
       }*/
       else{
-        printf("a");
+        //printf("a");
         aux = aux->parent;
         //if(aux == tree->root)return NULL;
       }
