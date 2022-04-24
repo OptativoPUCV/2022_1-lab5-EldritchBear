@@ -1188,3 +1188,13 @@ Sun Apr 24 20:57:47 UTC 2022:
  tests:  23|2
 total_score: 50/70
 55ebf2a
+Sun Apr 24 20:58:03 UTC 2022: 
+ treemap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:0:
+treemap.c: In function ‘nextTreeMap’:
+treemap.c:212:7: error: ‘else’ without a previous ‘if’
+       else{
+       ^~~~
+Compilation failed
+8030208

@@ -208,11 +208,11 @@ Pair * nextTreeMap(TreeMap * tree) {
         tree->current = aux;
         return aux->pair;
       }
+      return NULL;
       else{
         printf("a");
         aux = aux->parent;
       }
-      return NULL;
     }
   }
   printf("a");
