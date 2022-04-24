@@ -206,15 +206,15 @@ Pair * nextTreeMap(TreeMap * tree) {
         tree->current = aux;
         return aux->pair;
       }
-      else if(tree->lower_than(aux->pair->key, aux->parent->pair->key) == 0){
-        if(aux->parent->pair->key < aux-pair->key)return NULL;
+      /*else if(tree->lower_than(aux->pair->key, aux->parent->pair->key) == 0){
+        if(aux == tree->root)return NULL;
         tree->current = aux;
         return aux->pair;
-      }
+      }*/
       else{
         printf("a");
         aux = aux->parent;
-        if(aux == tree->root)return NULL;
+        //if(aux == tree->root)return NULL;
       }
     }
   }
