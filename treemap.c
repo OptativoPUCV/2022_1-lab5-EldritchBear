@@ -199,6 +199,7 @@ Pair * nextTreeMap(TreeMap * tree) {
     tree->current = aux;
     return aux->pair;
   }
+  
   if(aux->right == NULL){
     while(aux->parent != NULL){
       if(aux->parent == NULL)return NULL;
@@ -208,7 +209,6 @@ Pair * nextTreeMap(TreeMap * tree) {
         tree->current = aux;
         return aux->pair;
       }
-      return NULL;
       else{
         printf("a");
         aux = aux->parent;
