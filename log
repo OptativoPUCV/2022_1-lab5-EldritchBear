@@ -1076,3 +1076,17 @@ Sun Apr 24 20:24:15 UTC 2022:
  tests:  22|2
 total_score: 50/70
 c3ade8a
+Sun Apr 24 20:25:08 UTC 2022: 
+ treemap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:0:
+treemap.c: In function ‘nextTreeMap’:
+treemap.c:201:20: error: dereferencing ‘void *’ pointer [-Werror]
+       printf("%p",(*aux->pair->key));
+                    ^~~~~~~~~~~~~~~
+treemap.c:201:19: error: invalid use of void expression
+       printf("%p",(*aux->pair->key));
+                   ^
+cc1: all warnings being treated as errors
+Compilation failed
+df367eb
