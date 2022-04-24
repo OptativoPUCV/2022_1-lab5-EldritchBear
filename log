@@ -1104,3 +1104,9 @@ treemap.c:201:19: error: invalid use of void expression
 cc1: all warnings being treated as errors
 Compilation failed
 ed1ad04
+Sun Apr 24 20:26:00 UTC 2022: 
+ treemap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  22|2
+total_score: 50/70
+40e5b16
