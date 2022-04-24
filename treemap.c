@@ -195,21 +195,17 @@ Pair * nextTreeMap(TreeMap * tree) {
     return minimum(aux)->pair;
   }
 
-  /*if(tree->lower_than(aux->pair->key, aux->parent->pair->key) == 0){
-    tree->current = aux;
-    return aux->pair;
-  }*/
-  
   if(aux->right == NULL){
     while(aux->parent != NULL){
       if(aux->parent == NULL)return NULL;
-      printf("key: %d\n", *(int*)aux->pair->key );
+      //printf("key: %d\n", *(int*)aux->pair->key );
       if(tree->lower_than(aux->pair->key, aux->parent->pair->key) == 1){
         aux = aux->parent;
         tree->current = aux;
         return aux->pair;
       }
       else if(tree->lower_than(aux->pair->key, aux->parent->pair->key) == 0){
+        if(tree->lower_than(aux->parent->pair->key,aux->pair->key) == 1)return NULL;
         tree->current = aux;
         return aux->pair;
       }
