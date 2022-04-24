@@ -1009,3 +1009,20 @@ Sun Apr 24 19:58:47 UTC 2022:
  1 file changed, 1 insertion(+), 1 deletion(-)
  tests:  0|0
 a2cf7db
+Sun Apr 24 19:59:03 UTC 2022: 
+ treemap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:0:
+treemap.c:180:5: error: expected identifier or ‘(’ before ‘return’
+     return NULL;
+     ^~~~~~
+treemap.c:181:1: error: expected identifier or ‘(’ before ‘}’ token
+ }
+ ^
+treemap.c: In function ‘upperBound’:
+treemap.c:179:3: error: control reaches end of non-void function [-Werror=return-type]
+   }
+   ^
+cc1: all warnings being treated as errors
+Compilation failed
+98b1efe
